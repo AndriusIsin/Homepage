@@ -169,3 +169,27 @@ h5 {
         
     }
 
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 5px 43.5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+button {background-color: #04AA6D;} 
+button:hover {background-color: #46a049;}
