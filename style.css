@@ -191,5 +191,7 @@ h5 {
   font-size: 15px;
   cursor: pointer;
 }
+.left{
+margin-left:10px;}
 button {background-color: #04AA6D;} 
 button:hover {background-color: #46a049;}
