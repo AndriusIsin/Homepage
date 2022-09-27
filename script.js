@@ -196,3 +196,39 @@ document.getElementById('check').addEventListener('click', (event) => {
   element_total2.innerText = total.reduce((a,b) => a+b, 0);
 
 });
+var value, pay, item;
+
+function getNumberOrString(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return value
+  } else {
+    return number_value
+  }
+}
+
+
+value = getNumberOrString(document.getElementById('menu').value);
+pay = ['Visa 💳', ' PayPal  💸', 'Apple Pay '];
+
+
+document.getElementById('menu').addEventListener('click', (event) => {
+  if (value == 'open') {
+    let element_list2 = document.getElementById('list2');
+    element_list2.replaceChildren();
+    pay.forEach((item) => {
+      let element_list22 = document.getElementById('list2');
+      let new_li = document.createElement('li');
+      new_li.innerText = item;
+
+      element_list22.appendChild(new_li);
+    });
+    value = 'close';
+  } else {
+    let element_list23 = document.getElementById('list2');
+    element_list23.replaceChildren();
+    value = 'open';
+  }
+
+});
